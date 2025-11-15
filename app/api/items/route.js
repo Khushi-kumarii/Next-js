@@ -1,6 +1,8 @@
+// app/api/items/route.js
 import { items } from "@/data/items";
-import { NextResponse } from "next/server";
 
 export async function GET() {
-  return NextResponse.json(items);
+  return new Response(JSON.stringify(items), {
+    headers: { "Content-Type": "application/json" },
+  });
 }
