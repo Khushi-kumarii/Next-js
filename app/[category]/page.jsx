@@ -1,3 +1,5 @@
+"use client";  // Add this at the top of page.jsx
+
 import ClientSection from "@/components/ClientSection";
 import { items } from "@/data/items";
 
