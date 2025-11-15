@@ -1,5 +1,5 @@
 import ClientSection from "@/components/ClientSection";
-import { items } from "../../data/items";
+import { items } from "@/data/items";
 
 export const dynamic = "force-dynamic";
 

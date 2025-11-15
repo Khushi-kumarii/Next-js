@@ -1,5 +1,6 @@
-import { items } from "../../../data/items";
+import { items } from "@/data/items";
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  return Response.json(items);
+  return NextResponse.json(items);
 }
