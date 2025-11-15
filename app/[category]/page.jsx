@@ -1,12 +1,16 @@
-"use client";  // Add this at the top of page.jsx
+"use client"; // already added
 
 import ClientSection from "@/components/ClientSection";
 import { items } from "@/data/items";
+import { useParams } from "next/navigation"; // <-- import hook
 
 export const dynamic = "force-dynamic";
 
-export default function CategoryPage({ params }) {
-  const category = params.category;
+export default function CategoryPage() {
+  const params = useParams();       // <-- get route params
+  const category = params?.category; // <-- optional chaining
+
+  if (!category) return <p>Category not found.</p>; // safety check
 
   const categoryItems = items.filter(
     (item) => item.category.toLowerCase() === category.toLowerCase()
