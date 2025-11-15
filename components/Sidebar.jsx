@@ -5,8 +5,15 @@ import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const categories = ["clothing", "electronics", "accessories"];
-
+ const categories = [
+    "clothing",
+    "electronics",
+    "accessories",
+    "home",
+    "books",
+    "beauty",
+    "sports"
+  ];
   return (
     <aside className="sidebar">
       <h2 className="sidebar-title">Categories</h2>

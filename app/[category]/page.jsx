@@ -1,16 +1,16 @@
-"use client"; // already added
+"use client"; 
 
 import ClientSection from "@/components/ClientSection";
 import { items } from "@/data/items";
-import { useParams } from "next/navigation"; // <-- import hook
+import { useParams } from "next/navigation"; 
 
 export const dynamic = "force-dynamic";
 
 export default function CategoryPage() {
-  const params = useParams();       // <-- get route params
-  const category = params?.category; // <-- optional chaining
+  const params = useParams();       
+  const category = params?.category; 
 
-  if (!category) return <p>Category not found.</p>; // safety check
+  if (!category) return <p>Category not found.</p>; 
 
   const categoryItems = items.filter(
     (item) => item.category.toLowerCase() === category.toLowerCase()

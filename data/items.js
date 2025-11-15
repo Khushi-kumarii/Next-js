@@ -1,4 +1,3 @@
-// data/items.js
 export const items = [
   // Clothing
   { id: 1, name: "Red Shirt", category: "clothing", price: 499 },
